@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>报纸排版</title>
+</head>
+<style>
+	*{margin:0; padding:0;}
+	body{font-family:"Microsoft YaHei";}
+	a{text-decoration:none; color:#000;}
+	li{list-style:none;}
+	.fl{float:left;}
+	.fr{float:right;}
+	.mb70{margin-bottom:70px;}
+	.mt20{margin-top:20px;}
+	.header,.content,.footer{width:896px; margin:0 auto;}
+	.header{height:60px; border-bottom:1px solid #000; font-size:12px;}
+	.header .logo{width:102px; height:24px; background-color:#d15e5f; padding:36px 0 0 8px; float:left;}
+	.header .logo a{color:#fff; line-height:12px;}
+	.header .time{color:#d15e5f; font-style:normal; float:right; margin-top:36px;}
+	.footer{height:60px; border-top:1px solid #000; font-size:12px;}
+	.footer a{color:#d15e5f; float:right; margin-top:6px;}
+	.content{height:1190px; margin:35px auto 40px;}
+	.weapper{overflow:hidden;}
+	.frt_main{width:640px; float:left;}
+	.focus_map{margin-bottom:40px; position:relative;}
+	.green_bg,.red_bg{width:190px; height:300px; position:absolute; top:0; opacity:0.5; filter:alpha(opacity:50);}
+	.green_bg{background-color:#458d5b; left:0;}
+	.red_bg{background-color:#cb777f; right:0;}
+	.frt_txt{font-size:12px; line-height:16px; color:#787677; font-family:"宋体"; float:left; margin-right:30px;}
+	.frt_txt.nomr{margin-right:0;}
+	.frt_txt h3{font-size:16px; text-decoration:underline;}
+	.frt_txt p{margin-top:8px;}
+	.frt_txt ul{color:#000; font-family:"Microsoft YaHei"; margin-top:30px;}
+	.txt_what{width:228px;}
+	.txt_what h3{color:#458c5b;}
+	.txt_when{width:204px;}
+	.txt_when h3{color:#cc9954;}
+	.txt_how{width:134px;}
+	.txt_how h3{color:#cb777f;}
+	.txt_how span{color:#c74a4d; font-style:italic;}
+	.frt_aside{width:204px; border-top:1px solid #d15e5f; float:right;}
+	.frt_aside h3{font-size:24px; line-height:30px; text-decoration:underline; font-weight:normal;}
+	.frt_aside i{font-size:12px; display:block; line-height:10px; color:#696566; font-family:'宋体'; margin-top:5px;}
+	.frt_aside strong{font-size:116px; color:#71b972; font-weight:500; font-style:italic; margin-left:-30px;}
+	.frt_aside h4{font-size:55px; color:#cc818d; font-weight:normal; margin-right:5px;}
+	.frt_aside em{font-size:21px; color:#cc818d; margin:20px 20px 0 0;}
+	.frt_aside span{font-size:12px; line-height:14px; color:#000;}
+	.scd_main{width:458px; float:right;}
+	.scd_focus{height:258px; margin-bottom:30px; position:relative;}
+	.scd_focus h3{height:46px; border-left:3px solid #6fb26f; font-size:26px; line-height:46px; color:#fff; padding-left:12px; position:absolute; bottom:8px; left:40px;}
+	.scd_focus em{font-size:12px; color:#6fb26f; margin-left:5px; letter-spacing:2px;}
+	.focus_bg{width:100%; height:60px; background-color:#000; opacity:0.5; filter:alpha(opacity:50); position:absolute; bottom:0; left:0;}
+	.scd_info{width:458px; height:290px; background-color:#edebd4; padding-top:30px; position:relative;}
+	.scd_info ul{width:400px; margin:0 auto;}
+	.scd_info li{font-size:16px; letter-spacing:2px; margin-bottom:20px;}
+	.scd_info li i{font-size:12px;}
+	.scd_info li span{border:8px solid transparent; border-bottom-color:#333f66; margin-right:10px;}
+	.scd_info_red{width:260px; height:160px; background-color:#d15e5f; color:#fff; position:absolute; bottom:0; left:0;}
+	.scd_info_red h3{height:86px; border-right:2px solid #fff; font-size:110px; line-height:86px; font-weight:normal; padding-right:5px; position:absolute; top:40px; left:15px;}
+	.scd_info_red p{width:158px; height:42px; position:absolute; top:48px; left:92px;}
+	.scd_info_red i{font-size:12px; line-height:10px; position:absolute; top:96px; left:92px;}
+	.scd_aside{width:410px; float:left;}
+	.scd_asidetit{width:418px; height:154px; border-bottom:2px solid #333f66; font-family:"黑体"; margin-bottom:20px;}
+	.scd_asidetit h2{font-size:42px; line-height:40px; color:#343f66;}
+	.scd_asidetit strong{font-size:72px; color:#ebe537; line-height:50px; font-style:italic;}
+	.scd_asidetit h3{font-size:33px; line-height:50px; color:#343f66;}
+	.scd_asidetxt p{font-size:12px; line-height:16px; color:#787677; font-family:"宋体";}
+	.scd_asidetxt strong{font-size:70px; line-height:70px; color:#ebe537; font-weight:normal;}
+	.scd_asidetxt .txt_top{width:338px;}
+	.scd_asidetxt .txt_main{width:216px;}
+	.scd_asidetxt img{margin-top:16px;}
+</style>
+<body>
+	<div class="header">
+		<div class="logo">
+			<a href="#">ife.baidu.com</a>
+		</div>
+		<em class="time">2016.03</em>
+	</div>
+	<div class="content">
+		<div class="weapper mb70">
+			<div class="frt_main">
+				<div class="focus_map">
+					<a href="#"><img src="img/task1_6_1.jpg" alt="" width="640" height="300" /></a>
+					<div class="green_bg"></div>
+					<div class="red_bg"></div>
+				</div>
+				<div class="weapper">
+					<div class="frt_txt txt_what">
+						<h3>What</h3>
+						<p>端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端端前端前端</p>
+					</div>
+					<div class="frt_txt txt_when">
+						<h3>When</h3>
+						<p>端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端</p>
+					</div>
+					<div class="frt_txt nomr txt_how">
+						<h3>How</h3>
+						<p>前端前端端前端前端前端前端前端前端前端前端前端前端端前</p>
+						<ul>
+							<li>What-------- <span>40%</span></li>
+							<li>What-------- <span>40%</span></li>
+							<li>What-------- <span>40%</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="frt_aside">
+				<h3>About<br />Technologe</h3>
+				<i>About technologe about technologe about technologe</i>
+				<strong>700</strong>
+				<div class="weapper">
+					<h4 class="fl">3.2</h4>
+					<em class="fl">css</em>
+					<span class="fl">cssssccsccscssc</span>
+				</div>
+			</div>
+		</div>
+		<div class="weapper">
+			<div class="scd_main">
+				<div class="scd_focus">
+					<img src="img/task1_6_2.jpg" alt="" width="458" height="258" />
+					<div class="focus_bg"></div>
+					<h3>前端技术<em>前端技术前端技术</em></h3>
+				</div>
+				<div class="scd_info">
+					<ul>
+						<li><span class="fl"></span>前端前端前端前端前端前端 ....................<i>前端</i></li>
+						<li><span class="fl"></span>前端前端前端前端前端前端 ....................<i>前端</i></li>
+						<li><span class="fl"></span>前端前端前端前端前端前端 ....................<i>前端</i></li>
+					</ul>
+					<div class="scd_info_red">
+						<h3>0</h3>
+						<p>ONE TWO THREE FORE FIVE</p>
+						<i>hello world hello world hello world</i>
+					</div>
+				</div>
+			</div>
+			<div class="scd_aside">
+				<div class="scd_asidetit">
+					<h2><strong>THE</strong> TECHNOLOGEOF FRONT</h2>
+					<h3>前端技术领域</h3>
+				</div>
+				<div class="scd_asidetxt">
+					<div class="weapper">
+						<strong class="fl">前</strong><p class="fr txt_top">端前端前端端前端前端前端前端前端端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端<p>
+					</div>
+					<div class="weapper">
+						<p class="fl txt_main">前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前。端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端前端前端前端前端前前端前端前端前端前前前端前前前前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端端前端</p>
+						<img class="fr" src="img/task1_6_3.jpg" alt="" width="166" height="290" />
+					</div>
+					<p class="fl"> 前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<a href="#">ife.baidu.com</a>
+	</div>
+</body>
+</html>
