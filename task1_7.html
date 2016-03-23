@@ -5,16 +5,40 @@
 	<title>新世界</title>
 	<link rel="stylesheet" href="stylesheets/reset.css" type="text/css" />
 	<style>
-		.commonWidth{width:1280px; margin:0 auto;}
+		.fl{float:left;}
+		.fr{float:right;}
+		.whiteBg{background-color:#fff !important;}
+		.commonWidth{width:1280px; overflow:hidden; margin:0 auto;}
+		.weapper{overflow:hidden;}
+		.header{height:56px; line-height:52px; overflow:hidden;}
+		.header .logo{text-indent:-999em;}
+		.header .logo a{width:107px; height:57px; display:block; background:url(img/task1_7/logo.jpg); margin-left:60px;}
+		.header .nav{width:470px; margin-left:500px;}
+		.header .nav ul{}
+		.header .nav li{float:left; margin-right:20px;}
+		.header .nav li a{height:52px; border-bottom:5px solid #fff; color:#787b83; float:left; padding:0 15px;}
+		.header .nav li a:hover{border-bottom:5px solid #e74f4d; color:#e74f4d; text-decoration:none;}
+		.banner{height:690px; overflow:hidden; background:url(img/task1_7/banner.jpg);}
+		.introduceList{height:205px; padding-top:45px;}
+		.aboutWorld{height:362px; background-color:#ececec;}
+		.cityList{height:340px; background:url(img/task1_7/city_bg.jpg);}
+		.activeList{height:605px; background-color:#f7f7f7;}
+		.activeBrief{height:565px;}
+		.activeBrief .txt{width:429px;}
+		.viewMore{height:520px;}
+		.viewMore .txt{width:426px; height:520px; background-color:#e74f4d;}
+		.volunteer{height:750px;}
+		.footer{height:360px; background-color:#32353e;}
+		.footerBar{height:56px; background-color:#303039;}
 	</style>
 </head>
 <body>
 	<!-- 头部导航 -->
 	<div class="header commonWidth">
-		<div class="logo">
+		<div class="logo fl">
 			<h1><a href="#">新世界</a></h1>
 		</div>
-		<div class="nav">
+		<div class="nav fl">
 			<ul>
 				<li><a href="#">首页</a></li>
 				<li><a href="#">最新活动</a></li>
@@ -23,7 +47,7 @@
 				<li><a href="#">关于我们</a></li>
 			</ul>
 		</div>
-		<div class="log">
+		<div class="log fl">
 			<a href="#">登录</a>
 		</div>
 	</div>
@@ -115,8 +139,8 @@
 	<!-- 活动简介 -->
 	<div class="activeBrief commonWidth">
 		<div class="adPic">
-			<img src="" alt="">
-			<div class="txt">
+			<img class="fl" src="img/task1_7/activeimg.jpg" alt="">
+			<div class="txt fr">
 				<ul>
 					<li>
 						<h3></h3>
@@ -136,6 +160,69 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+	
+	<!-- 查看更多 -->
+	<div class="viewMore commonWidth">
+		<div class="txt fl"></div>
+		<div class="txt whiteBg fl"></div>
+		<img class="fl" src="" alt="">
+	</div>
+
+	<!-- 志愿者信息 -->
+	<div class="commonWidth volunteer">
+		<div class="volunteerTit">
+			<h2>成为我们的志愿者</h2>
+			<p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情<br />
+				那就不要犹豫，快来加入我们，成为改变所有人生活的人 </p>
+		</div>
+		<div class="weapper">
+			<div class="fl volunteerTxt">
+				<div class="volTxtWeapper">
+					<h3>新世界志愿者协议</h3>
+					<p>加入新世界志愿者的人员必须遵守中华人民共共和国的相关法律法规，并且本着平等资源的原则 ......</p>
+					<a href="#">more</a>
+				</div>
+			</div>
+			<div class="fr volunteerFrom">
+				<from>
+					<ul>
+						<li>
+							<div class="fromTxt">
+								<input type="text" placeholder="姓名：" />
+							</div>
+							<div class="fromTxt">
+								<input type="text" placeholder="年龄：" />
+							</div>
+						</li>
+						<li>
+							<div class="fromTxt">
+								<input type="text" placeholder="联系方式：" />
+							</div>
+							<div class="fromTxt">
+								<input type="text" placeholder="联系地址：" />
+							</div>
+						</li>
+						<li>
+							<textarea class="fromTarea"></textarea>
+						</li>
+						<li>
+							<input class="fromBtn" type="button" value="提交申请" />
+						</li>
+					</ul>
+				</from>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部信息 -->
+	<div class="footer">
+		
+	</div>
+
+	<!-- 底部栏 -->
+	<div class="footerBar">
+		
 	</div>
 
 </body>
