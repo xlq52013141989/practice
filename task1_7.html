@@ -18,6 +18,8 @@
 		.header .nav li{float:left; margin-right:20px;}
 		.header .nav li a{height:52px; border-bottom:5px solid #fff; color:#787b83; float:left; padding:0 15px;}
 		.header .nav li a:hover{border-bottom:5px solid #e74f4d; color:#e74f4d; text-decoration:none;}
+		.header .log{height:20px; background:url(img/task1_7/iocPic.jpg) 0 -200px no-repeat; line-height:20px; padding:15px 0 0 25px;}
+		.header .log a{color:#e74f4d;}
 		.banner{height:690px; overflow:hidden; background:url(img/task1_7/banner.jpg); color:#fff; position:relative;}
 		.banner h2{font-size:60px; font-weight:normal; position:absolute; left:118px; top:228px;}
 		.banner p{width:300px; height:60px; font-size:21px; position:absolute;; top:308px; left:126px;}
@@ -34,7 +36,9 @@
 		.aboutWorld{height:362px; background-color:#ededec; position:relative;}
 		.aboutWorld h2{font-size:54px; color:#323333; font-weight:normal; position:absolute; left:218px; top:230px; opacity:0.5;}
 		.aboutWorld span{width:92px; height:92px; background:url(img/task1_7/bigSquare.jpg); margin-left:-46px; position:absolute; left:50%; top:90px;}
-		.cityList{height:340px; background:url(img/task1_7/city_bg.jpg);}
+		.cityList{width:1154px; height:170px; background:url(img/task1_7/city_bg.jpg); padding:170px 0 0 126px;}
+		.cityList select{width:236px; height:36px; display:block; border:none; float:left; margin-right:28px;}
+		.cityList a{width:236px; height:36px; display:block; background-color:#bf4f48; line-height:36px; color:#fff; text-align:center; float:left;}
 		.activeList{height:605px; background-color:#f7f7f7; position:relative;}
 		.activeList h2{font-size:21px; font-weight:normal; letter-spacing:40px; position:absolute; top:106px; left:415px;}
 		.activeList h3{font-size:12px; color:#cbcbcb; font-weight:normal; position:absolute; left:465px; top:134px;}
@@ -61,8 +65,16 @@
 		.viewMore .txt.whiteBg span{background-color:#abaaaa;}
 		.viewMore .txt.whiteBg a{border-color:#e74f4d; color:#e74f4d;}
 		.volunteer{height:750px;}
-		.volunteerWeapper{padding:115px 140px 165px 140px;}
-		.volunteerTxt{width:290px;}
+		.volunteerTit{text-align:center; padding-top:112px;}
+		.volunteerTit h2{font-size:21px; font-weight:normal;}
+		.volunteerTit span{width:32px; height:3px; display:inline-block; background-color:#e74f4d;}
+		.volunteerTit p{color:#aaaaaa; margin-top:14px;}
+		.volunteerWeapper{padding:106px 140px 165px 140px;}
+		.volunteerTxt{width:290px; color:#231815; }
+		.volTxtWeapper{margin-bottom:40px;}
+		.volTxtWeapper h3{font-size:14px; font-weight:normal; margin-bottom:26px; opacity:0.8; filter:alpha(opacity:80)}
+		.volTxtWeapper p{height:32px; overflow:hidden; opacity:0.6; filter:alpha(opacity:60)}
+		.volTxtWeapper a{color:#231815; float:right; opacity:0.6; filter:alpha(opacity:60)}
 		.volunteerFrom{width:640px;}
 		.volunteerFrom ul{width:680px;}
 		.volunteerFrom li{overflow:hidden; margin-bottom:14px;}
@@ -80,7 +92,7 @@
 		.share a.xin{background-position:-50px 0;}
 		.share a.twitter{background-position:0px -50px;}
 		.share a.world{background-position:-50px -50px;}
-		.footerBar{height:56px; background-color:#303039;}
+		.footerBar{height:56px; background-color:#303039; line-height:56px; color:#fff;}
 	</style>
 </head>
 <body>
@@ -237,6 +249,7 @@
 	<div class="commonWidth volunteer">
 		<div class="volunteerTit">
 			<h2>成为我们的志愿者</h2>
+			<span></span>
 			<p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情<br />
 				那就不要犹豫，快来加入我们，成为改变所有人生活的人 </p>
 		</div>
@@ -245,6 +258,15 @@
 				<div class="volTxtWeapper">
 					<h3>新世界志愿者协议</h3>
 					<p>加入新世界志愿者的人员必须遵守中华人民共共和国的相关法律法规，并且本着平等资源的原则 ......</p>
+					<a href="#">more</a>
+				</div>
+				<div class="volTxtWeapper">
+					<h3>新世界志愿者协议</h3>
+					<p>加入新世界志愿者的人员必须遵守中华人民共共和国的相关法律法规，并且本着平等资源的原则 ......</p>
+					<a href="#">more</a>
+				</div>
+				<div class="volTxtWeapper">
+					<h3>新世界志愿者协议</h3>
 					<a href="#">more</a>
 				</div>
 			</div>
@@ -299,7 +321,10 @@
 
 	<!-- 底部栏 -->
 	<div class="footerBar">
-		
+		<div class="commonWidth">
+			<p class="fl">@2016新世界</p>
+			<p class="fr">Back to top</p>
+		</div>
 	</div>
 
 </body>
