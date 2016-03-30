@@ -8,6 +8,15 @@
 		.commonWidth{width:1280px; margin:0 auto;}
 		.header{width:100%; height:56px; background-color:#228abf;}
 		.aside{width:260px; height:1210px; background-color:#2a2d3d; float:left;}
+		.personal{height:150px; position:relative;}
+		.prlHead{width:50px; height:50px; border:1px solid #fff; padding:3px; position:absolute; left:46px; top:18px; border-radius:50%;}
+		.prlHead img{border-radius:50%;}
+		.prlName{font-size:16px; color:#fff; font-weight:normal; position:absolute; left:120px; top:40px;}
+		.prlNum{color:#767f92; text-align:center; position:absolute; left:26px; bottom:20px;}
+		.prlNum span{width:90px; height:32px; float:left;}
+		.prlNum span.bdrR{border-right:1px solid #767f92;}
+		.subNav>ul{padding-left:46px;}
+		.subNav>ul>li>a{height:50px; line-height:50px; color:#767f92;}
 		.main{width:1020px; height:1210px; background-color:#eeeeed; margin-left:260px;}
 		.webSite{height:30px; background-color:#fff; line-height:30px; padding-left:30px;}
 	</style>
@@ -33,10 +42,28 @@
 		<div class="aside">
 
 			<!-- 个人信息 -->
-			<div class=""></div>
+			<div class="personal">
+				<div class="prlHead">
+					<img src="" alt="" />
+				</div>
+				<strong class="prlName">ABC123</strong>
+				<div class="prlNum">
+					<span class="bdrR">110<br />收藏</span>
+					<span>110<br />收藏</span>
+				</div>
+			</div>
 
 			<!-- 侧边菜单 -->
-			<div class=""></div>
+			<div class="subNav">
+				<ul>
+					<li><a href="#">个人列表</a></li>
+					<li><a href="#">个人收藏</a></li>
+					<li><a href="#">我的分享</a></li>
+					<li><a href="#">图库</a></li>
+					<li><a href="#">成长记录</a></li>
+					<li><a href="#">账户信息</a></li>
+				</ul>
+			</div>
 		</div>
 
 		<!-- 主题内容 -->
