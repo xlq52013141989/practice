@@ -5,6 +5,8 @@
 	<title>练习9</title>
 	<link rel="stylesheet" href="stylesheets/reset.css" type="text/css" />
 	<style>
+		.fl{float:left;}
+		.fr{float:right;}
 		.commonWidth{width:1280px; margin:0 auto;}
 		.header{width:100%; height:56px; background-color:#228abf;}
 		.aside{width:260px; height:1210px; background-color:#2a2d3d; float:left;}
@@ -19,6 +21,14 @@
 		.subNav>ul>li>a{height:50px; line-height:50px; color:#767f92;}
 		.main{width:1020px; height:1210px; background-color:#eeeeed; margin-left:260px;}
 		.webSite{height:30px; background-color:#fff; line-height:30px; padding-left:30px;}
+		.condition{width:830px; height:54px; background-color:#fff; border:1px solid #ccc; padding:15px 30px; margin:20px auto 10px;}
+		.condition label{line-height:26px; color:#aca8a7;}
+		.condition select,.condition input{height:24px; border:1px solid #ccc; line-height:24px; margin:0 15px 5px 15px;}
+		.condition .query{width:135px; margin-right:23px;}
+		.condition .swap{width:175px; padding-right:15px; margin-right:32px;}
+		.condition .short{width:68px;}
+		.condition .long{width:120px;}
+		.condition .btn{width:52px; height:26px; background-color:#568abd; line-height:26px; color:#fff; text-align:center; float:left; margin:15px 0 0 15px;}
 	</style>
 </head>
 <body>
@@ -75,14 +85,98 @@
 			</div>
 
 			<!-- 搜索条件 -->
-			<div class=""></div>
+			<div class="condition">
+				<div class="fl query">
+					<label>查询项<select class="short"><option>第一项</option></select></label>
+				</div>
+				<div class="fl swap">
+					<label>买方<select class="long"><option>第一项</option></select></label><br />
+					<label>卖方<select class="long"><option>第一项</option></select></label>
+				</div>
+				<div class="fl">
+					<label>日期<input class="long" type="text" /></label>
+					<label>总消耗<select class="short"><option>第一项</option></select></label><br />
+					<label>人数<select class="short"><option>第一项</option></select></label>
+					<label>成交量<select class="long"><option>第一项</option></select></label>
+				</div>
+				<a class="btn" href="#" >搜索</a>
+			</div>
 
 			<!-- 历史查询 -->
-			<div class=""></div>
+			<div class="jistory">
+				<span class="jistoryPrev"></span>
+				<div class="jistoryShow">
+					<ul>
+						<li>
+							<p>10:00 am</p>
+							<strong>1200</strong>
+						</li>
+						<li>
+							<p>10:00 am</p>
+							<strong>1200</strong>
+						</li>
+						<li>
+							<p>10:00 am</p>
+							<strong>1200</strong>
+						</li>
+						<li>
+							<p>10:00 am</p>
+							<strong>1200</strong>
+						</li>
+						<li>
+							<p>10:00 am</p>
+							<strong>1200</strong>
+						</li>
+						<li>
+							<p>10:00 am</p>
+							<strong>1200</strong>
+						</li>
+					</ul>
+				</div>
+				<span class="jistoryNext"></span>
+				<a class="jistoryBtn" href="#"></a>
+			</div>
 
 			<!-- 统计 -->
-			<div class=""></div>
+			<div class="statistic">
+				<ul>
+					<li>
+						<p>123111</p>
+						<span>成交量</span>
+						<div></div>
+					</li>
+					<li>
+						<p>123111</p>
+						<span>成交量</span>
+						<div></div>
+					</li>
+					<li>
+						<p>123111</p>
+						<span>成交量</span>
+						<div></div>
+					</li>
+					<li>
+						<p>123111</p>
+						<span>成交量</span>
+						<div></div>
+					</li>
+				</ul>
+			</div>
 
+			<!-- 选项卡表格 -->
+			<div class="tableTab">
+				<h2>第一组项目</h2>
+				<div class="tabShow">
+					<div class="tabTit">
+						<ul>
+							<li>项目一</li>
+							<li>项目一</li>
+							<li>项目一</li>
+						</ul>
+					</div>
+					<div class="tabList"></div>
+				</div>
+			</div>
 
 		</div>
 	</div>
